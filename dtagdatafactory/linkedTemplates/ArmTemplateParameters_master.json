@@ -8,6 +8,9 @@
 		"ls_blob_2_blob_connectionString": {
 			"value": ""
 		},
+		"ls_blob_storages_connectionString": {
+			"value": ""
+		},
 		"ls_blobstorages_connectionString": {
 			"value": ""
 		},

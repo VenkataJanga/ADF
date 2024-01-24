@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blob_2_blob'"
 		},
+		"ls_blob_storages_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_blob_storages'"
+		},
 		"ls_blobstorages_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blobstorages'"
@@ -21,62 +25,13 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/delete_blob_source')]",
+			"name": "[concat(parameters('factoryName'), '/pl_copy_data_from_blob_to_blob')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"activities": [
 					{
-						"name": "delete_blob_data_from_Source",
-						"type": "Delete",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"dataset": {
-								"referenceName": "blob_1",
-								"type": "DatasetReference",
-								"parameters": {}
-							},
-							"logStorageSettings": {
-								"linkedServiceName": {
-									"referenceName": "ls_blobstorages",
-									"type": "LinkedServiceReference"
-								}
-							},
-							"enableLogging": true,
-							"storeSettings": {
-								"type": "AzureBlobStorageReadSettings",
-								"recursive": true,
-								"enablePartitionDiscovery": false
-							}
-						}
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {}
-				},
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/blob_1')]",
-				"[concat(variables('factoryId'), '/linkedServices/ls_blobstorages')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/pl_blob_2_blob')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "Copy data1",
+						"name": "cp_blob_to_blob",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -122,14 +77,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "blob_1",
+								"referenceName": "ds_blob_source",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "blob_2",
+								"referenceName": "ds_blob_sink",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -142,43 +97,17 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/blob_1')]",
-				"[concat(variables('factoryId'), '/datasets/blob_2')]"
+				"[concat(variables('factoryId'), '/datasets/ds_blob_source')]",
+				"[concat(variables('factoryId'), '/datasets/ds_blob_sink')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/blob1')]",
+			"name": "[concat(parameters('factoryName'), '/ds_blob_sink')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ls_blob_2_blob",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ls_blob_2_blob')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/blob2')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ls_blob_2_blob",
+					"referenceName": "ls_blob_storages",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -193,19 +122,52 @@
 					"firstRowAsHeader": true,
 					"quoteChar": "\""
 				},
-				"schema": []
+				"schema": [
+					{
+						"name": "provider_id",
+						"type": "String"
+					},
+					{
+						"name": "provider_name",
+						"type": "String"
+					},
+					{
+						"name": "city",
+						"type": "String"
+					},
+					{
+						"name": "business_unit_",
+						"type": "String"
+					},
+					{
+						"name": "case_volume",
+						"type": "String"
+					},
+					{
+						"name": "process_adherence_rate",
+						"type": "String"
+					},
+					{
+						"name": "response_time___home_dealer",
+						"type": "String"
+					},
+					{
+						"name": "month_long",
+						"type": "String"
+					}
+				]
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ls_blob_2_blob')]"
+				"[concat(variables('factoryId'), '/linkedServices/ls_blob_storages')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/blob_1')]",
+			"name": "[concat(parameters('factoryName'), '/ds_blob_source')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ls_blobstorages",
+					"referenceName": "ls_blob_storages",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -257,34 +219,7 @@
 				]
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ls_blobstorages')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/blob_2')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ls_blobstorages",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"container": "sinkcontainer"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ls_blobstorages')]"
+				"[concat(variables('factoryId'), '/linkedServices/ls_blob_storages')]"
 			]
 		},
 		{
@@ -297,6 +232,20 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('ls_blob_2_blob_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_blob_storages')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "connecting blob storages ",
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('ls_blob_storages_connectionString')]"
 				}
 			},
 			"dependsOn": []

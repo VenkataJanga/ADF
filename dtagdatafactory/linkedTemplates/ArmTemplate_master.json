@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blob_2_blob'"
 		},
+		"ls_blob_storages_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_blob_storages'"
+		},
 		"ls_blobstorages_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blobstorages'"
@@ -44,6 +48,9 @@
 					},
 					"ls_blob_2_blob_connectionString": {
 						"value": "[parameters('ls_blob_2_blob_connectionString')]"
+					},
+					"ls_blob_storages_connectionString": {
+						"value": "[parameters('ls_blob_storages_connectionString')]"
 					},
 					"ls_blobstorages_connectionString": {
 						"value": "[parameters('ls_blobstorages_connectionString')]"
