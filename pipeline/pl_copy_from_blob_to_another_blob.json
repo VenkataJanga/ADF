@@ -41,6 +41,104 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "provider_id",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "provider_id",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "provider_name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "provider_name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "city",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "city",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "business_unit_",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "business_unit_",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "case_volume",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "case_volume",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "process_adherence_rate",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "process_adherence_rate",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "response_time___home_dealer",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "response_time___home_dealer",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "month_long",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "month_long",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -50,13 +148,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_blob",
+						"referenceName": "blob1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "blob2",
+						"referenceName": "blob_2",
 						"type": "DatasetReference"
 					}
 				]
