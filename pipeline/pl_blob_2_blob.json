@@ -49,13 +49,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "blob1",
+						"referenceName": "blob_1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "blob2",
+						"referenceName": "blob_2",
 						"type": "DatasetReference"
 					}
 				]
