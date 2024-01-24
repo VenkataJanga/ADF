@@ -1,0 +1,55 @@
+{
+	"name": "ds_blob_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_storages",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "sinkcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "provider_id",
+				"type": "String"
+			},
+			{
+				"name": "provider_name",
+				"type": "String"
+			},
+			{
+				"name": "city",
+				"type": "String"
+			},
+			{
+				"name": "business_unit_",
+				"type": "String"
+			},
+			{
+				"name": "case_volume",
+				"type": "String"
+			},
+			{
+				"name": "process_adherence_rate",
+				"type": "String"
+			},
+			{
+				"name": "response_time___home_dealer",
+				"type": "String"
+			},
+			{
+				"name": "month_long",
+				"type": "String"
+			}
+		]
+	}
+}
