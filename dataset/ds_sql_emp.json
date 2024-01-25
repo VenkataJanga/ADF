@@ -1,0 +1,53 @@
+{
+	"name": "ds_sql_emp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_emp",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EMPNO",
+				"type": "varchar"
+			},
+			{
+				"name": "ENAME",
+				"type": "varchar"
+			},
+			{
+				"name": "JOB",
+				"type": "varchar"
+			},
+			{
+				"name": "MGR",
+				"type": "varchar"
+			},
+			{
+				"name": "HIREDATE",
+				"type": "varchar"
+			},
+			{
+				"name": "SAL",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM",
+				"type": "varchar"
+			},
+			{
+				"name": "DEPTNO",
+				"type": "varchar"
+			},
+			{
+				"name": "UPDATED_DATE",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employee"
+		}
+	}
+}
