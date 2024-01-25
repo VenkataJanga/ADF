@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blobstorages'"
 		},
+		"ls_emp_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_emp'"
+		},
 		"ls_query_blob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_query_blob'"
@@ -26,6 +30,10 @@
 		"ls_sql_db_table_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_sql_db_table'"
+		},
+		"ls_sql_emp_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_sql_emp'"
 		},
 		"ls_sql_query_blob_connectionString": {
 			"type": "secureString",
@@ -71,11 +79,17 @@
 					"ls_blobstorages_connectionString": {
 						"value": "[parameters('ls_blobstorages_connectionString')]"
 					},
+					"ls_emp_connectionString": {
+						"value": "[parameters('ls_emp_connectionString')]"
+					},
 					"ls_query_blob_connectionString": {
 						"value": "[parameters('ls_query_blob_connectionString')]"
 					},
 					"ls_sql_db_table_connectionString": {
 						"value": "[parameters('ls_sql_db_table_connectionString')]"
+					},
+					"ls_sql_emp_connectionString": {
+						"value": "[parameters('ls_sql_emp_connectionString')]"
 					},
 					"ls_sql_query_blob_connectionString": {
 						"value": "[parameters('ls_sql_query_blob_connectionString')]"
@@ -86,6 +100,26 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "dtagdatafactory_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dtagdatafactory_ArmTemplate_0')]"
+			]
 		}
 	]
 }

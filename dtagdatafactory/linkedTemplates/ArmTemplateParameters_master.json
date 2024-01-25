@@ -14,10 +14,16 @@
 		"ls_blobstorages_connectionString": {
 			"value": ""
 		},
+		"ls_emp_connectionString": {
+			"value": ""
+		},
 		"ls_query_blob_connectionString": {
 			"value": ""
 		},
 		"ls_sql_db_table_connectionString": {
+			"value": ""
+		},
+		"ls_sql_emp_connectionString": {
 			"value": ""
 		},
 		"ls_sql_query_blob_connectionString": {
