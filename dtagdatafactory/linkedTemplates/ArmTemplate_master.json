@@ -19,9 +19,25 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blobstorages'"
 		},
+		"ls_combo_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_combo'"
+		},
+		"ls_dept_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_dept'"
+		},
 		"ls_emp_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_emp'"
+		},
+		"ls_emp_blob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_emp_blob'"
+		},
+		"ls_output_combo_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_output_combo'"
 		},
 		"ls_query_blob_connectionString": {
 			"type": "secureString",
@@ -79,8 +95,20 @@
 					"ls_blobstorages_connectionString": {
 						"value": "[parameters('ls_blobstorages_connectionString')]"
 					},
+					"ls_combo_connectionString": {
+						"value": "[parameters('ls_combo_connectionString')]"
+					},
+					"ls_dept_connectionString": {
+						"value": "[parameters('ls_dept_connectionString')]"
+					},
 					"ls_emp_connectionString": {
 						"value": "[parameters('ls_emp_connectionString')]"
+					},
+					"ls_emp_blob_connectionString": {
+						"value": "[parameters('ls_emp_blob_connectionString')]"
+					},
+					"ls_output_combo_connectionString": {
+						"value": "[parameters('ls_output_combo_connectionString')]"
 					},
 					"ls_query_blob_connectionString": {
 						"value": "[parameters('ls_query_blob_connectionString')]"

@@ -14,7 +14,19 @@
 		"ls_blobstorages_connectionString": {
 			"value": ""
 		},
+		"ls_combo_connectionString": {
+			"value": ""
+		},
+		"ls_dept_connectionString": {
+			"value": ""
+		},
 		"ls_emp_connectionString": {
+			"value": ""
+		},
+		"ls_emp_blob_connectionString": {
+			"value": ""
+		},
+		"ls_output_combo_connectionString": {
 			"value": ""
 		},
 		"ls_query_blob_connectionString": {
