@@ -363,7 +363,9 @@
 							{
 								"activity": "getFileList",
 								"dependencyConditions": [
-									"Skipped"
+									"Skipped",
+									"Completed",
+									"Succeeded"
 								]
 							}
 						],
