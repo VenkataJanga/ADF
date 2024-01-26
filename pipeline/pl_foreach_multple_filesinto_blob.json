@@ -27,7 +27,8 @@
 						"activity": "getFileList",
 						"dependencyConditions": [
 							"Skipped",
-							"Completed"
+							"Completed",
+							"Succeeded"
 						]
 					}
 				],
