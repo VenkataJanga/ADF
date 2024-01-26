@@ -597,31 +597,12 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "getFileList",
-						"type": "SetVariable",
-						"dependsOn": [],
-						"policy": {
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"variableName": "files_list",
-							"value": [
-								"emp123.csv",
-								"product.json"
-							]
-						}
-					},
-					{
 						"name": "ForEach1",
 						"type": "ForEach",
 						"dependsOn": [
 							{
 								"activity": "getFileList",
 								"dependencyConditions": [
-									"Skipped",
-									"Completed",
 									"Succeeded"
 								]
 							}
@@ -703,6 +684,23 @@
 										}
 									]
 								}
+							]
+						}
+					},
+					{
+						"name": "getFileList",
+						"type": "SetVariable",
+						"dependsOn": [],
+						"policy": {
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "files_list",
+							"value": [
+								"emp.csv",
+								"product.json"
 							]
 						}
 					}
