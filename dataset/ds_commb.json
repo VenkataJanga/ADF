@@ -1,0 +1,17 @@
+{
+	"name": "ds_commb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_combination_list",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "cobooutput"
+			}
+		}
+	}
+}

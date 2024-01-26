@@ -1,0 +1,17 @@
+{
+	"name": "ls_binary_meta",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_combi_files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "cobooutput"
+			}
+		}
+	}
+}
