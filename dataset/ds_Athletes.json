@@ -1,0 +1,24 @@
+{
+	"name": "ds_Athletes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Athletes12",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "athletes.csv",
+				"folderPath": "source_data_from_git",
+				"fileSystem": "tokyo-olympic-adf-proect"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
