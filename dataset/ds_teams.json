@@ -1,0 +1,24 @@
+{
+	"name": "ds_teams",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_teams",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "teams.csv",
+				"folderPath": "source_data_from_git",
+				"container": "tokyo-olympic-adf-proect"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

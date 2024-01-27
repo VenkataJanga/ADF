@@ -1,0 +1,21 @@
+{
+	"name": "ds_teams_cp_from_git",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_teams_cp_from_git",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

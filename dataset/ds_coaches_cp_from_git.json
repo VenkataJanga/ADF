@@ -1,0 +1,21 @@
+{
+	"name": "ds_coaches_cp_from_git",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_coaches_cp_from_git",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

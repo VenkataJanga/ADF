@@ -1,0 +1,24 @@
+{
+	"name": "ds_coaches",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_coaches91",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "coaches.csv",
+				"folderPath": "source_data_from_git",
+				"fileSystem": "tokyo-olympic-adf-proect"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
