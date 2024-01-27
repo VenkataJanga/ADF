@@ -1,0 +1,12 @@
+{
+	"name": "ls_Http_Athletes",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://github.com/VenkataJanga/Project_Tokyo-olympic-ADF/blob/main/Athletes.csv",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
