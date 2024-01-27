@@ -7,6 +7,14 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "dtagdatafactory"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"ls_Athletes12_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_Athletes12'"
+		},
 		"ls_blob_2_blob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blob_2_blob'"
@@ -18,6 +26,30 @@
 		"ls_blobstorages_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blobstorages'"
+		},
+		"ls_coaches_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_coaches'"
+		},
+		"ls_coaches09_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_coaches09'"
+		},
+		"ls_coaches1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_coaches1'"
+		},
+		"ls_coaches91_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_coaches91'"
+		},
+		"ls_combi_files_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_combi_files'"
+		},
+		"ls_combination_list_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_combination_list'"
 		},
 		"ls_combo_connectionString": {
 			"type": "secureString",
@@ -34,6 +66,22 @@
 		"ls_emp_blob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_emp_blob'"
+		},
+		"ls_entriesGender_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_entriesGender'"
+		},
+		"ls_http_Athletes1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_http_Athletes1'"
+		},
+		"ls_medals_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_medals'"
+		},
+		"ls_medata_combination_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_medata_combination'"
 		},
 		"ls_output_combo_connectionString": {
 			"type": "secureString",
@@ -58,6 +106,54 @@
 		"ls_sql_to_blob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_sql_to_blob'"
+		},
+		"ls_teams_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_teams'"
+		},
+		"ls_Athletes12_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_Http_Athletes_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/VenkataJanga/Project_Tokyo-olympic-ADF/blob/main/Athletes.csv"
+		},
+		"ls_athletes_cp_from_git_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/Athletes.csv"
+		},
+		"ls_coaches09_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_coaches1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_coaches91_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_coaches_cp_from_git_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/Coaches.csv"
+		},
+		"ls_entriesGender_cp_from_git_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/EntriesGender.csv"
+		},
+		"ls_medals_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_medals_cp_from_git_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/Medals.csv"
+		},
+		"ls_teams_cp_from_git_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/Teams.csv"
 		},
 		"containerUri": {
 			"type": "string",
@@ -86,6 +182,12 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"ls_Athletes12_accountKey": {
+						"value": "[parameters('ls_Athletes12_accountKey')]"
+					},
 					"ls_blob_2_blob_connectionString": {
 						"value": "[parameters('ls_blob_2_blob_connectionString')]"
 					},
@@ -94,6 +196,24 @@
 					},
 					"ls_blobstorages_connectionString": {
 						"value": "[parameters('ls_blobstorages_connectionString')]"
+					},
+					"ls_coaches_connectionString": {
+						"value": "[parameters('ls_coaches_connectionString')]"
+					},
+					"ls_coaches09_accountKey": {
+						"value": "[parameters('ls_coaches09_accountKey')]"
+					},
+					"ls_coaches1_accountKey": {
+						"value": "[parameters('ls_coaches1_accountKey')]"
+					},
+					"ls_coaches91_accountKey": {
+						"value": "[parameters('ls_coaches91_accountKey')]"
+					},
+					"ls_combi_files_connectionString": {
+						"value": "[parameters('ls_combi_files_connectionString')]"
+					},
+					"ls_combination_list_connectionString": {
+						"value": "[parameters('ls_combination_list_connectionString')]"
 					},
 					"ls_combo_connectionString": {
 						"value": "[parameters('ls_combo_connectionString')]"
@@ -107,23 +227,32 @@
 					"ls_emp_blob_connectionString": {
 						"value": "[parameters('ls_emp_blob_connectionString')]"
 					},
-					"ls_output_combo_connectionString": {
-						"value": "[parameters('ls_output_combo_connectionString')]"
+					"ls_entriesGender_connectionString": {
+						"value": "[parameters('ls_entriesGender_connectionString')]"
 					},
-					"ls_query_blob_connectionString": {
-						"value": "[parameters('ls_query_blob_connectionString')]"
+					"ls_Athletes12_properties_typeProperties_url": {
+						"value": "[parameters('ls_Athletes12_properties_typeProperties_url')]"
 					},
-					"ls_sql_db_table_connectionString": {
-						"value": "[parameters('ls_sql_db_table_connectionString')]"
+					"ls_Http_Athletes_properties_typeProperties_url": {
+						"value": "[parameters('ls_Http_Athletes_properties_typeProperties_url')]"
 					},
-					"ls_sql_emp_connectionString": {
-						"value": "[parameters('ls_sql_emp_connectionString')]"
+					"ls_athletes_cp_from_git_properties_typeProperties_url": {
+						"value": "[parameters('ls_athletes_cp_from_git_properties_typeProperties_url')]"
 					},
-					"ls_sql_query_blob_connectionString": {
-						"value": "[parameters('ls_sql_query_blob_connectionString')]"
+					"ls_coaches09_properties_typeProperties_url": {
+						"value": "[parameters('ls_coaches09_properties_typeProperties_url')]"
 					},
-					"ls_sql_to_blob_connectionString": {
-						"value": "[parameters('ls_sql_to_blob_connectionString')]"
+					"ls_coaches1_properties_typeProperties_url": {
+						"value": "[parameters('ls_coaches1_properties_typeProperties_url')]"
+					},
+					"ls_coaches91_properties_typeProperties_url": {
+						"value": "[parameters('ls_coaches91_properties_typeProperties_url')]"
+					},
+					"ls_coaches_cp_from_git_properties_typeProperties_url": {
+						"value": "[parameters('ls_coaches_cp_from_git_properties_typeProperties_url')]"
+					},
+					"ls_entriesGender_cp_from_git_properties_typeProperties_url": {
+						"value": "[parameters('ls_entriesGender_cp_from_git_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -142,11 +271,90 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_http_Athletes1_connectionString": {
+						"value": "[parameters('ls_http_Athletes1_connectionString')]"
+					},
+					"ls_medals_accountKey": {
+						"value": "[parameters('ls_medals_accountKey')]"
+					},
+					"ls_medata_combination_connectionString": {
+						"value": "[parameters('ls_medata_combination_connectionString')]"
+					},
+					"ls_output_combo_connectionString": {
+						"value": "[parameters('ls_output_combo_connectionString')]"
+					},
+					"ls_query_blob_connectionString": {
+						"value": "[parameters('ls_query_blob_connectionString')]"
+					},
+					"ls_sql_db_table_connectionString": {
+						"value": "[parameters('ls_sql_db_table_connectionString')]"
+					},
+					"ls_sql_emp_connectionString": {
+						"value": "[parameters('ls_sql_emp_connectionString')]"
+					},
+					"ls_sql_query_blob_connectionString": {
+						"value": "[parameters('ls_sql_query_blob_connectionString')]"
+					},
+					"ls_sql_to_blob_connectionString": {
+						"value": "[parameters('ls_sql_to_blob_connectionString')]"
+					},
+					"ls_teams_connectionString": {
+						"value": "[parameters('ls_teams_connectionString')]"
+					},
+					"ls_medals_properties_typeProperties_url": {
+						"value": "[parameters('ls_medals_properties_typeProperties_url')]"
+					},
+					"ls_medals_cp_from_git_properties_typeProperties_url": {
+						"value": "[parameters('ls_medals_cp_from_git_properties_typeProperties_url')]"
+					},
+					"ls_teams_cp_from_git_properties_typeProperties_url": {
+						"value": "[parameters('ls_teams_cp_from_git_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'dtagdatafactory_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "dtagdatafactory_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dtagdatafactory_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "dtagdatafactory_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dtagdatafactory_ArmTemplate_2')]"
 			]
 		}
 	]

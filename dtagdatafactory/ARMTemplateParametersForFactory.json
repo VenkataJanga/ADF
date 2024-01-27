@@ -5,6 +5,12 @@
 		"factoryName": {
 			"value": "dtagdatafactory"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"ls_Athletes12_accountKey": {
+			"value": ""
+		},
 		"ls_blob_2_blob_connectionString": {
 			"value": ""
 		},
@@ -12,6 +18,24 @@
 			"value": ""
 		},
 		"ls_blobstorages_connectionString": {
+			"value": ""
+		},
+		"ls_coaches_connectionString": {
+			"value": ""
+		},
+		"ls_coaches09_accountKey": {
+			"value": ""
+		},
+		"ls_coaches1_accountKey": {
+			"value": ""
+		},
+		"ls_coaches91_accountKey": {
+			"value": ""
+		},
+		"ls_combi_files_connectionString": {
+			"value": ""
+		},
+		"ls_combination_list_connectionString": {
 			"value": ""
 		},
 		"ls_combo_connectionString": {
@@ -24,6 +48,18 @@
 			"value": ""
 		},
 		"ls_emp_blob_connectionString": {
+			"value": ""
+		},
+		"ls_entriesGender_connectionString": {
+			"value": ""
+		},
+		"ls_http_Athletes1_connectionString": {
+			"value": ""
+		},
+		"ls_medals_accountKey": {
+			"value": ""
+		},
+		"ls_medata_combination_connectionString": {
 			"value": ""
 		},
 		"ls_output_combo_connectionString": {
@@ -43,6 +79,42 @@
 		},
 		"ls_sql_to_blob_connectionString": {
 			"value": ""
+		},
+		"ls_teams_connectionString": {
+			"value": ""
+		},
+		"ls_Athletes12_properties_typeProperties_url": {
+			"value": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_Http_Athletes_properties_typeProperties_url": {
+			"value": "https://github.com/VenkataJanga/Project_Tokyo-olympic-ADF/blob/main/Athletes.csv"
+		},
+		"ls_athletes_cp_from_git_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/Athletes.csv"
+		},
+		"ls_coaches09_properties_typeProperties_url": {
+			"value": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_coaches1_properties_typeProperties_url": {
+			"value": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_coaches91_properties_typeProperties_url": {
+			"value": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_coaches_cp_from_git_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/Coaches.csv"
+		},
+		"ls_entriesGender_cp_from_git_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/EntriesGender.csv"
+		},
+		"ls_medals_properties_typeProperties_url": {
+			"value": "https://storagecontainerdtag.dfs.core.windows.net/"
+		},
+		"ls_medals_cp_from_git_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/Medals.csv"
+		},
+		"ls_teams_cp_from_git_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/Teams.csv"
 		}
 	}
 }
