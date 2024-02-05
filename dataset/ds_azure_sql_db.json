@@ -1,0 +1,16 @@
+{
+	"name": "ds_azure_sql_db",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_DTAG_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dao",
+			"table": "empoyee99900"
+		}
+	}
+}
