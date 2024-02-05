@@ -1,0 +1,16 @@
+{
+	"name": "AzureSqlT222able2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Az11ureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dao",
+			"table": "nisheel_emp"
+		}
+	}
+}
