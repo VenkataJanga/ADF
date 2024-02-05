@@ -8,7 +8,25 @@
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
 		"ls_Athletes12_accountKey": {
+			"value": ""
+		},
+		"ls_DTAG_connectionString": {
+			"value": ""
+		},
+		"ls_DTAG_SQL_connectionString": {
+			"value": ""
+		},
+		"ls_azureDB_connectionString": {
+			"value": ""
+		},
+		"ls_blob_connectionString": {
 			"value": ""
 		},
 		"ls_blob_2_blob_connectionString": {
@@ -42,6 +60,9 @@
 			"value": ""
 		},
 		"ls_dept_connectionString": {
+			"value": ""
+		},
+		"ls_ds_blob123_connectionString": {
 			"value": ""
 		},
 		"ls_emp_connectionString": {
