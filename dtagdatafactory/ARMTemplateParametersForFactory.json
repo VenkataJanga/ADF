@@ -5,13 +5,25 @@
 		"factoryName": {
 			"value": "dtagdatafactory"
 		},
+		"Az11ureSqlDatabase2_connectionString": {
+			"value": ""
+		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
 		"AzureBlobStorage2_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage2233_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2234456_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"Azureage22344570987_connectionString": {
 			"value": ""
 		},
 		"ls_Athletes12_accountKey": {
@@ -57,6 +69,9 @@
 			"value": ""
 		},
 		"ls_combo_connectionString": {
+			"value": ""
+		},
+		"ls_delete_blob_after_fivedays_connectionString": {
 			"value": ""
 		},
 		"ls_dept_connectionString": {
