@@ -47,6 +47,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_entriesGender'"
 		},
+		"ls_final_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_final'"
+		},
 		"ls_http_Athletes1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_http_Athletes1'"
@@ -71,10 +75,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_sql_db_table'"
 		},
-		"ls_sql_emp_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'ls_sql_emp'"
-		},
 		"ls_coaches91_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storagecontainerdtag.dfs.core.windows.net/"
@@ -86,6 +86,10 @@
 		"ls_entriesGender_cp_from_git_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/EntriesGender.csv"
+		},
+		"ls_final_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagecontainerdtag.dfs.core.windows.net/"
 		},
 		"ls_medals_properties_typeProperties_url": {
 			"type": "string",
@@ -265,6 +269,23 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/ls_final')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('ls_final_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('ls_final_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ls_http_Athletes1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -358,19 +379,6 @@
 				"type": "AzureSqlDatabase",
 				"typeProperties": {
 					"connectionString": "[parameters('ls_sql_db_table_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ls_sql_emp')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('ls_sql_emp_connectionString')]"
 				}
 			},
 			"dependsOn": []

@@ -119,6 +119,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_entriesGender'"
 		},
+		"ls_final_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_final'"
+		},
 		"ls_http_Athletes1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_http_Athletes1'"
@@ -190,6 +194,10 @@
 		"ls_entriesGender_cp_from_git_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/EntriesGender.csv"
+		},
+		"ls_final_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagecontainerdtag.dfs.core.windows.net/"
 		},
 		"ls_medals_properties_typeProperties_url": {
 			"type": "string",
@@ -347,6 +355,9 @@
 					"ls_entriesGender_connectionString": {
 						"value": "[parameters('ls_entriesGender_connectionString')]"
 					},
+					"ls_final_accountKey": {
+						"value": "[parameters('ls_final_accountKey')]"
+					},
 					"ls_http_Athletes1_connectionString": {
 						"value": "[parameters('ls_http_Athletes1_connectionString')]"
 					},
@@ -365,9 +376,6 @@
 					"ls_sql_db_table_connectionString": {
 						"value": "[parameters('ls_sql_db_table_connectionString')]"
 					},
-					"ls_sql_emp_connectionString": {
-						"value": "[parameters('ls_sql_emp_connectionString')]"
-					},
 					"ls_coaches91_properties_typeProperties_url": {
 						"value": "[parameters('ls_coaches91_properties_typeProperties_url')]"
 					},
@@ -376,6 +384,9 @@
 					},
 					"ls_entriesGender_cp_from_git_properties_typeProperties_url": {
 						"value": "[parameters('ls_entriesGender_cp_from_git_properties_typeProperties_url')]"
+					},
+					"ls_final_properties_typeProperties_url": {
+						"value": "[parameters('ls_final_properties_typeProperties_url')]"
 					},
 					"ls_medals_properties_typeProperties_url": {
 						"value": "[parameters('ls_medals_properties_typeProperties_url')]"
@@ -402,6 +413,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_sql_emp_connectionString": {
+						"value": "[parameters('ls_sql_emp_connectionString')]"
 					},
 					"ls_sql_query_blob_connectionString": {
 						"value": "[parameters('ls_sql_query_blob_connectionString')]"

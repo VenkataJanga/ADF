@@ -89,6 +89,9 @@
 		"ls_entriesGender_connectionString": {
 			"value": ""
 		},
+		"ls_final_accountKey": {
+			"value": ""
+		},
 		"ls_http_Athletes1_connectionString": {
 			"value": ""
 		},
@@ -142,6 +145,9 @@
 		},
 		"ls_entriesGender_cp_from_git_properties_typeProperties_url": {
 			"value": "https://raw.githubusercontent.com/VenkataJanga/Project_Tokyo-olympic-ADF/main/EntriesGender.csv"
+		},
+		"ls_final_properties_typeProperties_url": {
+			"value": "https://storagecontainerdtag.dfs.core.windows.net/"
 		},
 		"ls_medals_properties_typeProperties_url": {
 			"value": "https://storagecontainerdtag.dfs.core.windows.net/"
