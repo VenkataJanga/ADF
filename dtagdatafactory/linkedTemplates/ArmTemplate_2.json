@@ -272,7 +272,103 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText4')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_final",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileSystem": "outputcontainer"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/Json1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_final",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "nest_sample.json",
+						"fileSystem": "jsoncontainer"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string"
+						},
+						"name": {
+							"type": "string"
+						},
+						"ppu": {
+							"type": "number"
+						},
+						"batters": {
+							"type": "object",
+							"properties": {
+								"batter": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string"
+											},
+											"type": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						},
+						"topping": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "string"
+									},
+									"type": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Json2')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -556,92 +652,6 @@
 						"type": "String"
 					}
 				]
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ds_blob_source')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ls_blob_storages",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "MB_UPTIME_DEC23_data.csv",
-						"container": "sourcecontainer"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "provider_id",
-						"type": "String"
-					},
-					{
-						"name": "provider_name",
-						"type": "String"
-					},
-					{
-						"name": "city",
-						"type": "String"
-					},
-					{
-						"name": "business_unit_",
-						"type": "String"
-					},
-					{
-						"name": "case_volume",
-						"type": "String"
-					},
-					{
-						"name": "process_adherence_rate",
-						"type": "String"
-					},
-					{
-						"name": "response_time___home_dealer",
-						"type": "String"
-					},
-					{
-						"name": "month_long",
-						"type": "String"
-					}
-				]
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ds_coaches')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ls_coaches91",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobFSLocation",
-						"fileName": "coaches.csv",
-						"folderPath": "source_data_from_git",
-						"fileSystem": "tokyo-olympic-adf-proect"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": []
 			},
 			"dependsOn": []
 		}
